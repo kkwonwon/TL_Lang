@@ -75,6 +75,25 @@ int *line_count(int fileCount, char const *files[])
     return lineCounts;
 }
 
+bool scan_error(string **file, int *lineCounts, int fileCount) {
+    if (file == nullptr)
+    {
+        return true; // 파일 열기 실패로 프로그램 종료
+    }
+
+    if (lineCounts == nullptr)
+    {
+        // lineCounts가 nullptr이면 어떤 파일이든 열기 실패
+        // 메모리를 할당했으면 해제해주어야 함
+        for (int i = 0; i < fileCount - 1; i++)
+        {
+            delete[] file[i];
+        }
+        delete[] file;
+        return true;
+    }
+}
+
 void print_file(string **file, int *lineCounts, int fileCount)
 {
     for (int i = 0; i < fileCount - 1; i++)
@@ -89,25 +108,9 @@ void print_file(string **file, int *lineCounts, int fileCount)
 int main(int argc, char const *argv[])
 {
     string **file = file_scan(argc, argv);
-
-    if (file == nullptr)
-    {
-        return 1; // 파일 열기 실패로 프로그램 종료
-    }
-
     int *lineCounts = line_count(argc, argv);
 
-    if (lineCounts == nullptr)
-    {
-        // lineCounts가 nullptr이면 어떤 파일이든 열기 실패
-        // 메모리를 할당했으면 해제해주어야 함
-        for (int i = 0; i < argc - 1; i++)
-        {
-            delete[] file[i];
-        }
-        delete[] file;
-        return 1;
-    }
+    if (scan_error(file, lineCounts, argc)) return 1;
 
     print_file(file, lineCounts, argc);
 
