@@ -16,4 +16,4 @@ C++와 컴파일 공부를 위해 제작중 <br>
 
 메인.cpp를 g++을 이용해서 exe파일로 변환 후 .krl 파일이 있는 곳에서 실행 
 
-자세한 문법은 [위키](https://github.com/kkwonwon/KRLang.wiki.git)에서
+자세한 문법은 [위키](https://github.com/kkwonwon/KRLang/wiki)에서
