@@ -112,6 +112,8 @@ bool scan_error(string **file, int *lineCounts, int fileCount)
         delete[] file;
         return true;
     }
+
+    return false;
 }
 
 /**
