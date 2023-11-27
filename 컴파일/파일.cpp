@@ -91,7 +91,7 @@ int *line_count(int fileCount, char const *files[])
  * 파일 스캔 시의 오류 체킹
  * @param file 파일의 문장을 저장한 이차원 문자열 배열
  * @param lineCounts 파일당 문장 갯수 배열
- * @param files 파일의 이름들
+ * @param fileCount 파일 갯수
  * @return 오류가 있을 경우 true 반환, 오류가 없을 경우 false 반환
  */
 bool scan_error(string **file, int *lineCounts, int fileCount)
@@ -118,6 +118,9 @@ bool scan_error(string **file, int *lineCounts, int fileCount)
 
 /**
  * 스캔한 파일 내용을 출력
+ * @param file 파일의 문장을 저장한 이차원 문자열 배열
+ * @param lineCounts 파일당 문장 갯수 배열
+ * @param fileCount 파일 갯수
 */
 void print_file(string **file, int *lineCounts, int fileCount)
 {

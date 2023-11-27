@@ -1,12 +1,17 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-class TreeNode {
+class TreeNode
+{
 public:
     string data;
-    TreeNode* left;
-    TreeNode* right;
+    vector<TreeNode> *child;
 
-    TreeNode(string value) : data(value), left(nullptr), right(nullptr) {}
+    TreeNode(string value) : data(value), child(nullptr) {}
+};
+
+class AST {
+
 };
