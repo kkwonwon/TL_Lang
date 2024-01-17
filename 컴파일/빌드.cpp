@@ -1,44 +1,17 @@
 #include <iostream>
 #include <fstream>
-#include <stack>
-#include <vector>
-#include <map>
 #include <string>
 using namespace std;
 
-/**
- * 함수의 시작위치와 값, 끝위치와 값을 저장
-*/
-class Func {
-public:
-    /**함수 시작 부분의 인덱스와 라인*/
-    map<int, string> strat;
-    /**함수 종료 부분의 인덱스와 라인*/
-    map<int, string> end;
-};
+string varType[] = {"정수형인", "실수형인", "문자형인", "논리형인"};
 
-/**
- * 코드를 해석하기전 분리시켜 
- * 스택에 삽입 후 실행
-*/
-void build(string **file) {
-    stack<string[]> funcStack;
-    vector<Func> funcVec;
+string funcType[] = {"반환하지 않는", "정수형을 반환하는", "실수형을 반환하는",
+                     "문자형을 반환하는", "논리형을 반환하는"};
 
-    file_analysis(file, funcVec);
-    find_main(file, funcVec, funcStack);
-}
-
-/**
- * 파일을 분석하여 함수의 시작부분과 끝부분을 리스트로 받는다.
-*/
-void file_analysis(string **file, vector<Func> funcVec) {
+void build() {
+    ofstream cfile("krl.c");
     
-}
-
-/**
- * 리스트에서 '시작' 함수를 찾고 그 함수를 스택에 넣어 실행시킨다.
-*/
-void find_main(string **file, vector<Func> funcVec, stack<string[]> funcStack) {
-
+    
+    
+    cfile.close();
 }
