@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 
     print_file(file, lineCounts, argc);
 
-    build();
+    build(file, lineCounts, argc);
 
     for (int i = 0; i < argc - 1; i++)
         delete[] file[i];
