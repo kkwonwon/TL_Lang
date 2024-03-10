@@ -14,5 +14,7 @@ static map<wstring, Kind> stringToKind = {
     {L"#identifier",    Kind::Identifier},
 
     {L"함수",           Kind::Function},
-    {L"반환한다",       Kind::Return}
+    {L"반환한다",       Kind::Return},
+    {L"만약",           Kind::If},
+    {L"아니면",         Kind::Else}
 };

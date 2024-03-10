@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    scan_token(argc, argv);
+    vector<Token> tokenList = scan_token(argc, argv);
 
     return 0;
 }
