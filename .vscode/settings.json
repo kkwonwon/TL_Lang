@@ -48,5 +48,11 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "rust-analyzer.linkedProjects": [
+        ".\\rust_compiler\\Cargo.toml",
+        ".\\rust_compiler\\Cargo.toml",
+        ".\\rust_compiler\\Cargo.toml"
+    ],
+    "rust-analyzer.showUnlinkedFileNotification": false
 }
