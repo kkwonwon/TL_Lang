@@ -1,7 +1,7 @@
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 
-pub enum Kind {    
+    pub enum Kind {    
     Unknown, EndOfCode,
 
     NullLiteral,
@@ -32,7 +32,3 @@ lazy_static! {
     };
 }
 
-struct Token {
-    kind: Kind,
-    str: String,
-}
