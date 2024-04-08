@@ -23,7 +23,7 @@ namespace Analysis
                 foreach (string f in files)
                 {
                     using StreamReader sr = new(f);
-                    fileContent.Append(sr.ReadToEnd());
+                    fileContent.Append(sr.ReadToEnd() + '\n');
                 }
             }
             catch (Exception e)
@@ -39,10 +39,7 @@ namespace Analysis
             List<Token> result = [];
             code += '\0';
             Console.WriteLine(code); //debug
-            while (false)
-            {
-                
-            }
+            
             result.Add(new(Kind.EndOfCode));
             return result;
         }
