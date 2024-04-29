@@ -1,3 +1,6 @@
+# 제외 파일확장자
+*.sln
+
 # 제외폴더
 .vscode/
 CS_Compiler/bin/

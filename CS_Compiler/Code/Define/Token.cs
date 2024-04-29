@@ -2,17 +2,22 @@ namespace Define
 {
     class Token
     {
-        Kind kind { get; set; }
-        string? str { get; set; }
+        private Kind Kind { get; set; }
+        private string? Str { get; set; }
 
         public Token()
         {
-            kind = Kind.Unknown;
+            Kind = Kind.Unknown;
         }
 
         public Token(Kind kind)
         {
-            this.kind = kind;
+            Kind = kind;
+        }
+
+        public Token(Kind kind, string str) {
+            Kind = kind;
+            Str = str;
         }
     }
 }
